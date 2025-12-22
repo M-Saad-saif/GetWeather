@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class card extends Component {
   render() {
-    const { mode } = this.props;
+    const { city, mode, setCity, error } = this.props;
     return (
       <>
         <div className="card-container">
@@ -16,18 +16,18 @@ export default class card extends Component {
             </div>
 
             <div>
-              <input type="text" placeholder="Enter city" />
+              <input
+                type="text"
+                placeholder="Enter city"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+              />
               {mode === "forecast" && <input type="date" />}
+                <p style={{color:"#ffb0b0ff", fontSize:"15px"}}>{error}</p>
             </div>
 
             <div>
-              <button
-                onClick={() => {
-                  setTimeout(() => {
-                    this.props.getWeather();
-                  }, 500); 
-                }}
-              >
+              <button onClick={this.props.getWeather}>
                 Get {mode} weather
               </button>
             </div>

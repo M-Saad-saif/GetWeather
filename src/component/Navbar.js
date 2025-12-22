@@ -66,7 +66,7 @@ export default class Navbar extends Component {
               </ul>
               <form className="d-flex" role="search">
                 <button className="btn btn-outline-light" type="submit">
-                  GitHub<i class="ri-github-fill"></i>
+                  GitHub<i className="ri-github-fill"></i>
                 </button>
               </form>
             </div>

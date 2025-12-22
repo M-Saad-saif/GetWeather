@@ -9,8 +9,31 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
+  const ApiKey = process.env.REACT_APP_GETWEATHER_INFO;
+
   const [mode, setMode] = useState("Current");
   const [showResult, setshowResult] = useState(false);
+  const [city, setCity] = useState("");
+  const [error, setError] = useState("");
+
+  const handlegetWeather = () => {
+    if (!city) {
+      setError("Please enter place");
+
+      setTimeout(() => {
+        setError("");
+      }, 1000);
+      return;
+    }
+    setError("");
+    setshowResult(true);
+  };
+
+  const handleBack = () => {
+    setshowResult(false);
+    setCity("");
+    setError("");
+  };
 
   return (
     <>
@@ -40,8 +63,7 @@ function App() {
           title="GetWeather"
           setMode={(newmode) => {
             setMode(newmode);
-             setshowResult(false);
-             
+            setshowResult(false);
           }}
         />
         <Routes>
@@ -52,20 +74,21 @@ function App() {
               !showResult ? (
                 <Card
                   mode={mode}
-                  getWeather={() => {
-                    setshowResult(true);
-                  }}
+                  setCity={setCity}
+                  city={city}
+                  getWeather={handlegetWeather}
+                  error={error}
                 />
               ) : (
                 <CurrWeathCard
-                  onBack={() => {
-                    setshowResult(false);
-                  }}
+                  city={city}
+                  onBack={handleBack}
+                  ApiKey={ApiKey}
                 />
               )
             }
           />
-          <Route exact path="/about"  element={<About />} />
+          <Route exact path="/about" element={<About />} />
         </Routes>
       </Router>
     </>

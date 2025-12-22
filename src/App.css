@@ -406,3 +406,10 @@
 .Linkdin-Git-buttons button:hover {
   background-color: #222;
 }
+
+/* ======================Spinner css====================== */
+
+.Spinner-container {
+  position: relative;
+  top: 200px;
+}
