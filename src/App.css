@@ -1,38 +1,408 @@
-.App {
-  text-align: center;
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  width: 56%;
+  margin: 13px auto 0;
+  background-color: #003fbd6b;
+  border-radius: 37px;
+  position: relative;
+  backdrop-filter: blur(4px);
+  box-shadow: 0px 0px 20px -10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container-fluid {
+  padding: 0px 45px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-collapse {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.navbar-collapse .navbar-nav {
+  display: flex;
+  gap: 0.1rem;
+}
+
+.navbar-collapse .d-flex {
+  margin-left: auto;
+}
+
+
+.particles-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.container-fluid a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container-fluid a:hover {
+  color: rgb(147, 163, 255);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-brand {
+  margin-left: -28px;
+  color: white;
+}
+
+.navbar-brand img {
+  width: 63px;
+  margin: -22px -11px;
+}
+
+.navbar-collapse .navbar-nav {
+  display: flex;
+  gap: 0.1rem;
+  position: relative;
+  margin: 0 auto;
+}
+
+.navbar-brand:visited,
+.navbar-nav .nav-link:visited,
+.navbar-nav .nav-link:active,
+.navbar-nav .nav-link:focus {
+  color: white;
+}
+
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+  color: rgb(61, 129, 246);
+}
+
+
+/* ======================card css====================== */
+
+.card-container {
+  background-color: hsla(220, 100%, 62%, 0.598);
+  color: white;
+  align-items: anchor-center;
+  justify-self: anchor-center;
+  text-align: center;
+  /* margin-top: 6%; */
+  top: 25%;
+  border-radius: 13px;
+  padding: 21px 17px;
+  backdrop-filter: blur(12px);
+  position: absolute;
+}
+
+.card-container h2 {
+  text-align: left;
+  margin-top: -13px;
+  font-size: 25px;
+}
+
+/* Center the card */
+.card-container {
+  width: 360px;
+  padding: 24px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  align-items: anchor-center;
+  justify-self: anchor-center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.card-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Temperature & image section */
+.temp-img-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-container h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+/* Weather info text */
+.weather-info {
+  margin: 16px 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Input */
+.card-container input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Button */
+.card-container button {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-container button:hover {
+  background: #222;
+  transform: translateY(-2px);
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .card-container {
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card-container h1 {
+    font-size: 40px;
   }
+}
+
+
+/* ======================Current weather card css====================== */
+
+.CurrWC-constaier {
+  border: 2px solid white;
+  color: white;
+  align-items: anchor-center;
+  justify-self: anchor-center;
+  text-align: center;
+  width: 50%;
+  top: 31%;
+  border-radius: 13px;
+  padding: 12px 20px;
+  backdrop-filter: blur(10px);
+  position: absolute;
+
+}
+
+.currWC-parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+  color: white;
+  text-align: center;
+  background: #8c8cc64f;
+  width: 100%;
+  height: 45vh;
+  justify-self: anchor-center;
+  position: relative;
+  border-radius: 13px;
+  padding: 10px 0px;
+}
+
+.currWC-div1 {
+  grid-row: span 2 / span 2;
+}
+
+.currWC-div2 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+}
+
+.currWC-div3 {
+  grid-row-start: 3;
+}
+
+.currWC-div4 {
+  grid-column: span 2 / span 2;
+  grid-row-start: 3;
+}
+
+.currWC-div5 {
+  grid-row-start: 4;
+}
+
+.currWC-div6 {
+  grid-row-start: 4;
+}
+
+.currWC-div7 {
+  grid-row-start: 4;
+}
+
+.currWC-div8 {
+  grid-row-start: 5;
+}
+
+.currWC-div9 {
+  grid-row-start: 5;
+}
+
+.currWC-div10 {
+  grid-row-start: 5;
+}
+
+.curr-div11 {
+  grid-column: span 3 / span 3;
+  grid-row-start: 6;
+}
+
+.curr-div11 button {
+  width: 30%;
+
+}
+
+.curr-div11 button {
+  /* width: 100%; */
+  margin-top: 14px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.curr-div11 button:hover {
+  background: #222;
+  transform: translateY(-2px);
+}
+
+/* ======================about css====================== */
+
+
+
+.About-container {
+  /* border: 2px solid white; */
+  color: white;
+  align-items: anchor-center;
+  justify-self: anchor-center;
+  text-align: center;
+  width: 50%;
+  top: 20%;
+  border-radius: 13px;
+  padding: 12px 20px;
+  backdrop-filter: blur(10px);
+  position: absolute;
+}
+
+.d-block {
+  width: 20%;
+}
+
+/* About-container styling */
+.About-container {
+  max-width: 900px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-color: #6973;
+}
+
+/* Carousel images */
+.carousel-item img {
+  /* display: block;   */
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+
+/* Carousel caption */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  /* semi-transparent background */
+  padding: 7px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.carousel-caption h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+  color: #f0f0f0;
+}
+
+/* Carousel control buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+/* Indicators styling */
+.carousel-indicators button {
+  background-color: #555;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  margin: 3px;
+}
+
+.carousel-indicators .active {
+  background-color: #ff6b6b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 250px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+}
+
+.Linkdin-Git-buttons {
+  gap: 12px;
+  display: flex;
+  justify-self: anchor-center;
+}
+
+.Linkdin-Git-buttons button {
+  background-color: #000;
+  border: none;
+}
+
+.Linkdin-Git-buttons button:hover {
+  background-color: #222;
 }
