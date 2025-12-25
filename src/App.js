@@ -16,7 +16,7 @@ function App() {
   const [showResult, setshowResult] = useState(false);
   const [city, setCity] = useState("");
   const [error, setError] = useState("");
-  const [days, setDays] = useState(1);
+  const [days] = useState(1);
   const [selectDate, setSelecteDate] = useState("");
 
   const handlegetWeather = () => {
