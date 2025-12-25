@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
+// import PropType from 'prop-types'
 
-export default class card extends Component {
-  render() {
-    const { city, mode, setCity, error } = this.props;
+const card =(props)=> {
+    const { city, mode, setCity, error } = props;
     return (
       <>
         <div className="card-container">
@@ -27,7 +27,7 @@ export default class card extends Component {
             </div>
 
             <div>
-              <button onClick={this.props.getWeather}>
+              <button onClick={props.getWeather}>
                 Get {mode} weather
               </button>
             </div>
@@ -36,4 +36,8 @@ export default class card extends Component {
       </>
     );
   }
+
+card.prototype={
 }
+
+export default card

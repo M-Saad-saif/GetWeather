@@ -401,10 +401,12 @@
 .Linkdin-Git-buttons button {
   background-color: #000;
   border: none;
+  transition: transform 0.2s ease-in-out;
 }
 
 .Linkdin-Git-buttons button:hover {
   background-color: #222;
+  transform: translateY(-2px);
 }
 
 /* ======================Spinner css====================== */
