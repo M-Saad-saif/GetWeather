@@ -560,20 +560,6 @@ body {
   background-color: #ff6b6b;
 }
 
-/* Responsive adjustments */
-/* @media (max-width: 768px) {
-  .carousel-item img {
-    height: 250px;
-  }
-
-  .carousel-caption h5 {
-    font-size: 1.2rem;
-  }
-
-  .carousel-caption p {
-    font-size: 0.9rem;
-  }
-} */
 
 .Linkdin-Git-buttons {
   gap: 12px;
@@ -614,6 +600,7 @@ body {
       width: 100%;
       object-fit: fill;
     }
+
     .carousel-item .fore-img-3 {
       width: 100%;
       overflow-x: hidden;
@@ -656,11 +643,19 @@ body {
   gap: 12px;
   margin-top: 23px;
   margin-bottom: 20px;
-
+  cursor: grab;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   padding-bottom: 10px;
+  padding: 10px;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+
+.fore-parent.active {
+  cursor: grabbing;
 }
 
 .fore-card {
@@ -671,6 +666,7 @@ body {
   border-radius: 12px;
   padding: 12px;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .fore-div6 button {
