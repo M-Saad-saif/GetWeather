@@ -64,7 +64,7 @@ const about = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <button type="button" class="btn btn-secondary mb-3">
+                    <button type="button" className="btn btn-secondary mb-3">
                       Linkedin
                     </button>
                   </a>
@@ -74,7 +74,7 @@ const about = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <button type="button" class="btn btn-secondary mb-3">
+                    <button type="button" className="btn btn-secondary mb-3">
                       GitHub
                     </button>
                   </a>
