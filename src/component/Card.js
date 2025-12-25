@@ -6,7 +6,7 @@ const card = (props) => {
   return (
     <>
       <div className="card-container">
-        <h2>Check Weather</h2>
+        <h3>Check {mode} Weather</h3>
         <div className="information">
           <div className="weather-info">
             <h5>Welcome to GetWeather information</h5>
