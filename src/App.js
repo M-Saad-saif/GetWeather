@@ -3,6 +3,7 @@ import Navbar from "./component/Navbar";
 import Particles from "./component/Particles";
 import Card from "./component/Card";
 import CurrWeathCard from "./component/CurrWeathCard";
+import ForecastWCard from "./component/ForecastWCard";
 import About from "./component/About";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -15,16 +16,25 @@ function App() {
   const [showResult, setshowResult] = useState(false);
   const [city, setCity] = useState("");
   const [error, setError] = useState("");
+  const [days, setDays] = useState(1);
+  const [selectDate, setSelecteDate] = useState("");
 
   const handlegetWeather = () => {
     if (!city) {
-      setError("Please enter place");
+      setError("Please enter Place");
 
       setTimeout(() => {
         setError("");
       }, 1000);
       return;
     }
+
+    if (mode === "forecast" && !selectDate) {
+      setError("Please enter Date");
+      setTimeout(() => setError(""), 1000);
+      return;
+    }
+
     setError("");
     setshowResult(true);
   };
@@ -77,13 +87,23 @@ function App() {
                   setCity={setCity}
                   city={city}
                   getWeather={handlegetWeather}
+                  setSelecteDate={setSelecteDate}
                   error={error}
                 />
-              ) : (
+              ) : mode === "Current" ? (
                 <CurrWeathCard
                   city={city}
                   onBack={handleBack}
                   ApiKey={ApiKey}
+                />
+              ) : (
+                <ForecastWCard
+                  city={city}
+                  days={days}
+                  onBack={handleBack}
+                  selectDate={selectDate}
+                  ApiKey={ApiKey}
+                  selectedDate={selectDate}
                 />
               )
             }

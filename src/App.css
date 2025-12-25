@@ -1,7 +1,13 @@
 * {
-  /* margin: 0;
-  padding: 0; */
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  /* height: 100  vh; */
 }
 
 .navbar {
@@ -77,6 +83,11 @@
   color: rgb(61, 129, 246);
 }
 
+@media (max-width: 480px) {
+  .navbar{
+    width: 90%
+  }
+}
 
 /* ======================card css====================== */
 
@@ -113,6 +124,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   color: #ffffff;
   font-family: "Poppins", sans-serif;
+  z-index: -1;
 }
 
 /* Title */
@@ -193,7 +205,7 @@
   justify-self: anchor-center;
   text-align: center;
   width: 50%;
-  top: 31%;
+  top: 27%;
   border-radius: 13px;
   padding: 12px 20px;
   backdrop-filter: blur(10px);
@@ -204,26 +216,33 @@
 .currWC-parent {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(5, -1fr);
   gap: 8px;
   color: white;
   text-align: center;
   background: #8c8cc64f;
   width: 100%;
-  height: 45vh;
   justify-self: anchor-center;
   position: relative;
   border-radius: 13px;
   padding: 10px 0px;
 }
 
+.currWC-parent p strong {
+  margin-left: 12px;
+
+}
+
 .currWC-div1 {
-  grid-row: span 2 / span 2;
+  grid-row: span 1 / span 1;
+  top: 15px;
+  position: relative;
 }
 
 .currWC-div2 {
   grid-column: span 2 / span 2;
-  grid-row: span 2 / span 2;
+  grid-row: span 1 / span 1;
+  margin-top: 12px;
 }
 
 .currWC-div3 {
@@ -231,8 +250,8 @@
 }
 
 .currWC-div4 {
-  grid-column: span 2 / span 2;
-  grid-row-start: 3;
+  grid-column: span 3 / span 2;
+  grid-row-start: 2;
 }
 
 .currWC-div5 {
@@ -414,4 +433,78 @@
 .Spinner-container {
   position: relative;
   top: 200px;
+}
+
+
+/* ======================forecast wheater css====================== */
+
+.fore-container {
+  color: white;
+  align-items: anchor-center;
+  justify-self: anchor-center;
+  text-align: center;
+  width: 74%;
+  top: 20%;
+  border-radius: 13px;
+  padding: 12px 20px;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  max-width: 900px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: #8c8cc64f;
+}
+
+.fore-parent {
+  display: flex;
+  gap: 12px;
+  margin-top: 23px;
+  margin-bottom: 20px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.fore-card {
+  min-width: 22%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+.fore-div6 button {
+  width: 22%;
+  margin-top: 14px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fore-div6 button:hover {
+  background: #222;
+  transform: translateY(-2px);
+}
+
+.fore-parent::-webkit-scrollbar {
+  height: 5px;
+}
+
+.fore-parent::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.fore-info #fore-condition {
+  margin-bottom: 5px;
 }

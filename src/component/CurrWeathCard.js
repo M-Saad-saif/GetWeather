@@ -27,6 +27,8 @@ const CurrWeathCard = ({ city, ApiKey, onBack }) => {
 
         <div className="currWC-div1">
           <h1>{weather.current.temp_c}°C</h1>
+          <img src={weather.current.condition.icon} alt="weather icon" />
+
         </div>
 
         <div className="currWC-div2">
@@ -37,7 +39,6 @@ const CurrWeathCard = ({ city, ApiKey, onBack }) => {
         </div>
 
         <div className="currWC-div3">
-          <img src={weather.current.condition.icon} alt="weather icon" />
         </div>
 
         <div className="currWC-div4">
