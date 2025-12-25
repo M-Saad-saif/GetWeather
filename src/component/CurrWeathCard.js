@@ -38,52 +38,49 @@ const CurrWeathCard = ({ city, ApiKey, onBack }) => {
           </h2>
         </div>
 
-        <div className="currWC-div3">
-        </div>
-
-        <div className="currWC-div4">
+        <div className="currWC-div4  ">
           <p>
             Local Time: <strong>{weather.location.localtime}</strong>
           </p>
         </div>
 
-        <div className="currWC-div5">
+        <div className="currWC-div5 currWC">
           <p>
             Condition: <strong>{weather.current.condition.text}</strong>
           </p>
         </div>
 
-        <div className="currWC-div6">
+        <div className="currWC-div6 currWC">
           <p>
             Wind Speed: <strong>{weather.current.wind_kph} kph</strong>
           </p>
         </div>
 
-        <div className="currWC-div7">
+        <div className="currWC-div7 currWC">
           <p>
             Humidity: <strong>{weather.current.humidity}%</strong>
           </p>
         </div>
 
-        <div className="currWC-div8">
+        <div className="currWC-div8 currWC">
           <p>
             Feels Like: <strong>{weather.current.feelslike_c}°C</strong>
           </p>
         </div>
 
-        <div className="currWC-div9">
+        <div className="currWC-div9 currWC">
           <p>
             Dew Point: <strong>{weather.current.dewpoint_c}</strong>
           </p>
         </div>
 
-        <div className="currWC-div10">
+        <div className="currWC-div10 currWC">
           <p>
             Last Updated: <strong>{weather.current.last_updated}</strong>
           </p>
         </div>
 
-        <div className="curr-div11">
+        <div className="curr-div11 ">
           <button onClick={onBack}>
             <i className="ri-home-fill"></i> Back
           </button>

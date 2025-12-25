@@ -35,25 +35,25 @@ const about = () => {
 
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src={CurrentWImg} className="d-block w-20" alt="..." />
+              <img src={CurrentWImg} className=" d-block " alt="..." />
 
-              <div className="carousel-caption d-none d-md-block">
+              <div className="carousel-caption d-md-block">
                 <h5>Current Weather Information</h5>
                 <p>you will find Temperature, Regin, Humidity, Wind speed</p>
               </div>
             </div>
 
             <div className="carousel-item">
-              <img src={FOrecastWImg} className="d-block w-100" alt="..." />
+              <img src={FOrecastWImg} className="d-block fore-img-2" alt="..." />
 
-              <div className="carousel-caption d-none d-md-block">
+              <div className="carousel-caption d-md-block">
                 <h5>Forecast Weather Information</h5>
                 <p>you will find Temperature, Regin, Humidity, Wind speed.</p>
               </div>
             </div>
             <div className="carousel-item">
-              <img src={MyImg} className="d-block " alt="..." />
-              <div className="carousel-caption d-none d-md-block">
+              <img src={MyImg} className="d-block  fore-img-3" alt="..." />
+              <div className="carousel-caption d-md-block">
                 <h5>
                   <small>Made by </small>
                   Muhammad Saad Saif
