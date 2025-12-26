@@ -42,7 +42,7 @@ A fast, responsive, and modern **weather application built with React.js** that 
 
 ### 📱 Mobile View
 <p align="center">
-<img width="170" height="407" alt="image" src="https://github.com/user-attachments/assets/49c3029b-12c9-4259-88c5-1a88148a6839" />  <img width="214" height="170" alt="image" src="https://github.com/user-attachments/assets/df8fa4b9-6b93-4bf6-a7c9-bec7501df4e1" /> <img width="170" height="407" alt="image" src="https://github.com/user-attachments/assets/e697149e-65d2-482b-b4c9-b212374d5683" /> <img width="170" height="407" alt="image" src="https://github.com/user-attachments/assets/3dd61578-413c-49f0-8551-8619dcfa1226" />
+<img width="178" height="410" alt="image" src="https://github.com/user-attachments/assets/49c3029b-12c9-4259-88c5-1a88148a6839" />  <img width="170" height="407" alt="image" src="https://github.com/user-attachments/assets/df8fa4b9-6b93-4bf6-a7c9-bec7501df4e1" /> <img width="160" height="407" alt="image" src="https://github.com/user-attachments/assets/e697149e-65d2-482b-b4c9-b212374d5683" /> <img width="160" height="407" alt="image" src="https://github.com/user-attachments/assets/3dd61578-413c-49f0-8551-8619dcfa1226" />
 </p>
 
 --- 
