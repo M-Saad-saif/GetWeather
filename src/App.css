@@ -340,18 +340,18 @@ body {
 /* ======================Current weather card css====================== */
 
 .CurrWC-constaier {
-  border: 2px solid white;
-  color: white;
-  align-items: anchor-center;
-  justify-self: anchor-center;
-  text-align: center;
-  width: 50%;
-  top: 27%;
-  border-radius: 13px;
-  padding: 12px 20px;
-  backdrop-filter: blur(10px);
-  position: absolute;
-
+    /* border: 2px solid white; */
+    color: white;
+    align-items: anchor-center;
+    justify-self: anchor-center;
+    text-align: center;
+    width: 50%;
+    top: 20%;
+    border: none;
+    border-radius: 13px;
+    /* padding: 12px 20px; */
+    backdrop-filter: blur(10px);
+    position: absolute;
 }
 
 .currWC-parent {
@@ -366,7 +366,7 @@ body {
   justify-self: anchor-center;
   position: relative;
   border-radius: 13px;
-  padding: 10px 0px;
+  padding: 10px 20px;
 }
 
 .currWC-parent p strong {
@@ -446,6 +446,15 @@ body {
   background: #222;
   transform: translateY(-2px);
 }
+
+ .currWC {
+    border: 2px solid rgba(128, 128, 128, 0.204);
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    width: 96%;
+    justify-self: center;
+    margin-top: -5px;
+  }
 
 
 @media (max-width: 480px) {
